@@ -16,7 +16,7 @@ Each task is implemented as a separate method and includes JavaDoc and time comp
 5. Fibonacci (recursion)
 6. Power of a number (recursion)
 7. Reverse array using recursion
-8. 
+8. Check if string is all digits
 9. Binomial coefficient
 10. Greatest Common Divisor (GCD)
 

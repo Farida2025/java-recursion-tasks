@@ -58,6 +58,12 @@ public class Main {
         System.out.println("(ARRAY IN REVERSE) Answer of seventh problem: " + exercise7(n7, arr7));
 
 
+        System.out.println("EXERCISE8, Input string: ");
+        sc.nextLine();
+        String n8 = sc.nextLine();
+        System.out.println("(IS CONSIST OF ALL DIGITS) Answer of eighth problem: " + exercise8(n8));
+
+
 
         System.out.println("EXERCISE9, Input TWO number(first number must be smaller than second: ");
         int n9 =  sc.nextInt();
@@ -192,6 +198,23 @@ public class Main {
     }
 
 
+
+    /**
+     * This method checks whether a given string consists only of digits using recursion.
+     * It examines the first character of the string, and if it is a digit,
+     * recursively checks the rest of the string.
+     * Time complexity: O(n), where n is the length of the input string.
+     * The function processes one character per recursive call, resulting in linear time.
+     * @param s The string to check.
+     * @return "Yes" if the string consists only of digits, otherwise "No".
+     */
+    public static String exercise8(String s) {
+        if (s.length() == 0) return "Yes";
+        if (!Character.isDigit(s.charAt(0))) return "No";
+        return exercise8(s.substring(1));
+    }
+
+
     /**
      * This method calculates the binomial coefficient C(n, k) using recursion.
      * The binomial coefficient represents the number of ways to choose k elements from a set of n elements.
@@ -215,6 +238,7 @@ public class Main {
     }
 
 
+
     /**
      * This method calculates the Greatest Common Divisor (GCD) of two integers using
      * the recursive Euclidean algorithm.
@@ -230,6 +254,5 @@ public class Main {
         if(b == 0) return a;
         return exercise10(b, a%b) ;
     }
-
 
 }
