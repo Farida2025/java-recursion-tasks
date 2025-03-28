@@ -76,6 +76,15 @@ public class Main {
         int n10 =  sc.nextInt();
         int n102 =  sc.nextInt();
         System.out.println("(GCD)Answer of tenth problem: " + exercise10(n10, n102));
+        sc.nextLine();
+
+
+        //BONUS EXERCISES
+        System.out.println("EXERCISE11, Input TWO STRINGS WITH SAME SIZE: ");
+        String n11 =  sc.nextLine();
+        String n112 =  sc.nextLine();
+        exercise11(n11, n112);
+
 
     }
 
@@ -255,4 +264,28 @@ public class Main {
         return exercise10(b, a%b) ;
     }
 
+
+    //BONUS EXERCISES
+
+    public static void exercise11(String a, String b){
+        int f = a.length();
+        char[] arr = new char[f*2];
+        int g =0;
+        int j = 0;
+
+        for(int i = 0; i< f*2; i++){
+
+            if(i%2 == 0){
+                arr[i]= a.charAt(g);
+                g++;
+            }
+            if(i%2 != 0) {
+                arr[i] = b.charAt(j);
+                j++;
+            }
+        }
+        System.out.println("(MINGLE STRINGS)Answer of 11 problem " + new String(arr));
+
+
+    }
 }
