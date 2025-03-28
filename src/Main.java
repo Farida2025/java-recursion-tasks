@@ -83,7 +83,7 @@ public class Main {
         System.out.println("EXERCISE11, Input TWO STRINGS WITH SAME SIZE: ");
         String n11 =  sc.nextLine();
         String n112 =  sc.nextLine();
-        exercise11(n11, n112);
+        System.out.println("(MINGLE STRINGS) Answer of 11 problem: " + exercise11(n11, n112));
 
 
     }
@@ -267,25 +267,29 @@ public class Main {
 
     //BONUS EXERCISES
 
-    public static void exercise11(String a, String b){
-        int f = a.length();
-        char[] arr = new char[f*2];
-        int g =0;
-        int j = 0;
 
-        for(int i = 0; i< f*2; i++){
-
-            if(i%2 == 0){
-                arr[i]= a.charAt(g);
-                g++;
-            }
-            if(i%2 != 0) {
-                arr[i] = b.charAt(j);
-                j++;
-            }
-        }
-        System.out.println("(MINGLE STRINGS)Answer of 11 problem " + new String(arr));
-
-
+    /**
+     * This method mingles two strings of equal length using recursion.
+     * The mingling rule requires taking characters alternately from each string.
+     *
+     * For example, given:
+     * a = "abc"
+     * b = "xyz"
+     * The output will be "axbycz"
+     *
+     * The method recursively takes the first character of each string
+     * and appends them together, then recurses with the rest of the strings.
+     *
+     * Time complexity: O(n), where n is the length of the input strings.
+     * Each recursive call processes one character from each string, resulting in linear time.
+     *
+     * @param a The first string.
+     * @param b The second string (must be the same length as a).
+     * @return A new string with characters alternated from both strings.
+     */
+    public static String exercise11(String a, String b) {
+        if (a.length() == 0 && b.length() == 0) return "";
+        return a.charAt(0) + "" + b.charAt(0) + exercise11(a.substring(1), b.substring(1));
     }
+
 }
