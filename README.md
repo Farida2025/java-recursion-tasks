@@ -1,4 +1,4 @@
-# Java Recursion Exercises
+# assignment 1, recursion and function 
 
 This project contains Java-based solutions for recursive algorithm tasks.
 Each task is implemented as a separate method and includes JavaDoc and time complexity analysis.
@@ -21,6 +21,6 @@ Each task is implemented as a separate method and includes JavaDoc and time comp
 10. Greatest Common Divisor (GCD)
 
 
-## 🧠 Author
+## 👀 Author
 Dovletbayeva Farida
 SE-2403
