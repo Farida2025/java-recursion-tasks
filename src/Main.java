@@ -74,11 +74,13 @@ public class Main {
         sc.nextLine();
 
 
-        //BONUS EXERCISES
+        //BONUS EXERCISES 1
         System.out.println("EXERCISE11, Input TWO STRINGS WITH SAME SIZE: ");
         String n11 = sc.nextLine();
         String n112 = sc.nextLine();
         System.out.println("(MINGLE STRINGS) Answer of 11 problem: " + exercise11(n11, n112));
+
+
 
         //BONUS EXERCISES
         System.out.println("EXERCISE12, Input one number and such strings(R, G, Y, B): ");
