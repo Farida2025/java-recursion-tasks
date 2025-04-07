@@ -85,6 +85,15 @@ public class Main {
         String n112 =  sc.nextLine();
         System.out.println("(MINGLE STRINGS) Answer of 11 problem: " + exercise11(n11, n112));
 
+        //BONUS EXERCISES
+        System.out.println("EXERCISE12, Input one number and such strings(R, G, Y, B): ");
+        int n12 = Integer.parseInt(sc.nextLine());
+        for (int i = 0; i < n12; i++) {
+            String s = sc.nextLine();
+            System.out.println("Answer of 12 problem: " + exercise12(s));
+        }
+
+
 
     }
 
@@ -291,5 +300,43 @@ public class Main {
         if (a.length() == 0 && b.length() == 0) return "";
         return a.charAt(0) + "" + b.charAt(0) + exercise11(a.substring(1), b.substring(1));
     }
+
+    //BONUS EXERCISES
+
+    /**
+     * This method checks whether a given string of color balls is "full of colors" according to 4 rules:
+     *
+     * 1. The number of red ('R') balls must be equal to the number of green ('G') balls.
+     * 2. The number of yellow ('Y') balls must be equal to the number of blue ('B') balls.
+     * 3. In every prefix of the string, the difference between red and green balls must not exceed 1.
+     * 4. In every prefix of the string, the difference between yellow and blue balls must not exceed 1.
+     *
+     * The function iterates over the input string character by character, counts the occurrences of each color,
+     * and checks the prefix conditions on the go.
+     *
+     * Time complexity: O(n), where n is the length of the input string.
+     * Space complexity: O(1), since only a few counters are used.
+     *
+     * @param s The input string consisting of characters 'R', 'G', 'Y', 'B'.
+     * @return true if the string satisfies all 4 conditions, otherwise false.
+     */
+    public static boolean exercise12(String s) {
+        int red = 0, green = 0, yellow = 0, blue = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == 'R') red++;
+            else if (ch == 'G') green++;
+            else if (ch == 'Y') yellow++;
+            else if (ch == 'B') blue++;
+            if (Math.abs(red - green) > 1 || Math.abs(yellow - blue) > 1) {
+                return false;
+            }
+        }
+        return red == green && yellow == blue;
+    }
+}
+
+
+
 
 }
