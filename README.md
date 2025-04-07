@@ -19,6 +19,8 @@ Each task is implemented as a separate method and includes JavaDoc and time comp
 8. Check if string is all digits
 9. Binomial coefficient
 10. Greatest Common Divisor (GCD)
+11. Merge two strings alternately (recursion)
+12. Validate "full of colors" string
 
 
 ## 👀 Author
