@@ -82,7 +82,7 @@ public class Main {
 
 
 
-        //BONUS EXERCISES
+        //BONUS EXERCISES 2
         System.out.println("EXERCISE12, Input one number and such strings(R, G, Y, B): ");
         int n12 = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < n12; i++) {
